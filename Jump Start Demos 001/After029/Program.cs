@@ -46,7 +46,7 @@ namespace After029
                  Console.WriteLine("JSON (DataContractJsonSerializer)");
                  {
                      var url = new Uri("http://localhost:1234/MyService.svc/json/4");
-                     var client = new System.Net.WebClient();
+                     var client = new System.Net.WebClient();  // The web client is a wrapper around HTTP client?!
                      var json = await client.OpenReadTaskAsync(url);
                      var serializer = new DataContractJsonSerializer(typeof(DATACONTRACT.Data));
                      var data = serializer.ReadObject(json) as DATACONTRACT.Data;
@@ -78,6 +78,7 @@ namespace After029
         }
     }
 
+    // The JSON data will be cast to this type
     namespace JSONSAMPLE
     {
         public class Data

@@ -15,6 +15,8 @@ namespace After026
             Console.WriteLine(Run3());
             Console.WriteLine(Run4());
             Console.WriteLine(Run5());
+
+            Console.ReadLine();
         }
 
         static Int64 Run1() { return Run(10000); }
@@ -54,8 +56,7 @@ namespace After026
                         CounterName = counter,
                     };
                 counterInfos.Add(counterInfo);
-                PerformanceCounterCategory
-                    .Create(category, category, counterInfos);
+                PerformanceCounterCategory.Create(category, category, counterInfos);
 
                 // check creation
                 var counters

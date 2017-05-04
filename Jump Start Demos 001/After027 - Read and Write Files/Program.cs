@@ -22,9 +22,12 @@ namespace After027
             var dir = System.IO.Directory.GetCurrentDirectory();
 
             // isolated storage folder(s)
-            var iso = IsolatedStorageFile
-                .GetStore(IsolatedStorageScope.Assembly, "Demo")
-                .GetDirectoryNames("*");
+            // dedicated folder storage that can be used for anything
+            // hidden away so users are less likely to tamper with your files
+            // sandbox in which your application runs
+            //var iso = IsolatedStorageFile
+            //    .GetStore(IsolatedStorageScope.Assembly, "Demo")
+            //    .GetDirectoryNames("*");
 
             // manual path
             var temp = new System.IO.DirectoryInfo("c:\temp");

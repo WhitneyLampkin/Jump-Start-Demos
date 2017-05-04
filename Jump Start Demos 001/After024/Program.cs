@@ -66,7 +66,9 @@ namespace After024
             // Uses Rijndael as an algorithm
             // two classes Rijndael and Aes - use Aes (more secure)
 
-            // array of 16 random bytes - must be used for decryption - should be secret
+            // array of 16 random bytes 
+            // must be used for decryption 
+            // should be secret
             var key = new byte[] {12, 2, 56, 117, 12, 67, 33, 23, 12, 2, 56, 117, 12, 67, 33, 23};
 
             // another list of 16 bytes - can be shared publically, should be changed for each message exchange

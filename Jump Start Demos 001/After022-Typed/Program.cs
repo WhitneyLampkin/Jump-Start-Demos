@@ -14,7 +14,7 @@
             {
                 // specific exception
             }
-            catch (Exception ex)
+            catch (Exception ex)                // Example of chaining this catch to the previous one
             {
                 // generic exception
             }
