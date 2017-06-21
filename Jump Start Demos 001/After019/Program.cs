@@ -12,10 +12,6 @@ namespace After019
     {
         static void Main(string[] args)
         {
-
-            
-
-
             Action action = async () =>
             {
                 // without

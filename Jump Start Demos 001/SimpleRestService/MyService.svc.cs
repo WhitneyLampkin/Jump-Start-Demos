@@ -1,17 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.ServiceModel.Web;
-using System.Text;
-using System.Web.Script.Services;
 
 namespace SimpleRestService
 {
     [ServiceContract]
     public class MyService
     {
+        // To return JSON
         [OperationContract]
         [WebGet(UriTemplate = "/json/{number}", ResponseFormat = WebMessageFormat.Json)]
         public Data GetMultipleJson(string number)
@@ -19,6 +16,7 @@ namespace SimpleRestService
             return new Data(int.Parse(number));
         }
 
+        // To return XML
         [OperationContract]
         [WebGet(UriTemplate = "/xml/{number}", ResponseFormat = WebMessageFormat.Xml)]
         public Data GetMultipleXml(string number)

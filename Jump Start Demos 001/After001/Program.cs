@@ -33,7 +33,7 @@ namespace After001
             var list = new List<int>();
             list.Add(1);
             list.Add(2);
-            list.Add("three");
+            //list.Add("three");
         }
 
         // GENERICS

@@ -12,20 +12,25 @@ namespace After033
         {
             var data = Enumerable.Range(1, 50);
 
+            // Method Syntax
             var method = // IEnumerable<string>
-                 data.Where(x => x % 2 == 0)
-                 .Select(x => x.ToString());
+                 data.Where(x => x % 2 == 0)  // The input "x" which is the current item in the collection gets injected into the following predicate
+                 .Select(x => x.ToString());  // Projection Tool -- Create a new type; changes the data shape
 
+
+            // Query Syntax
             var query = // IEnumerable<string>
                 from d in data
                 where d % 2 == 0
                 select d.ToString();
 
+
+            // Hard-coding a break
             Debugger.Break();
 
             var projection =
                 from d in data
-                select new
+                select new  // This is an anonymous object. It doesn't have a name or properties
                 {
                     Even = (d % 2 == 0),
                     Odd = !(d % 2 == 0),
